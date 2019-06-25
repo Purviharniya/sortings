@@ -1,0 +1,13 @@
+def sorting():
+    array=list(map(int,input().split()))
+    size=len(array)
+    for i in range(1,size):
+        currentvalue=array[i]
+        pos=i
+        while pos>0 and array[pos-1]>currentvalue:
+            array[pos]=array[pos-1]
+            pos=pos-1
+        array[pos]=currentvalue
+    print("The sorted array is:")
+    print(array)
+sorting()
